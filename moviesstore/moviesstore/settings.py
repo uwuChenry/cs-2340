@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-i_47^k^fx+#8cx_0zoyf@-5j7b&ut55$a!gds^-bo7^r6ds&tc
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -128,6 +128,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATICFILES_DIRS = [
     BASE_DIR / 'moviesstore/static/',
 ]
+
+# Where `collectstatic` gathers all static files (including django.contrib.admin's)
+# for production hosting. Not used by `runserver` in development.
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
