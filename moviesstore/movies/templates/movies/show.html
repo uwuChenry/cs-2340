@@ -51,8 +51,7 @@
             </a>
             {% elif user.is_authenticated %}
             <a class="btn btn-outline-danger"
-              href="{% url 'movies.report_review' id=template_data.movie.id review_id=review.id %}"
-              onclick="return confirm('Report and delete this review?');">Report
+              href="{% url 'movies.report_review' id=template_data.movie.id review_id=review.id %}">Report
             </a>
             {% endif %}
           </li>
